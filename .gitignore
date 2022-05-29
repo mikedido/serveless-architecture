@@ -1,0 +1,8 @@
+# All the file zip
+*zip
+
+# All the terraform cache
+tf/.terraform
+tf/terraform.lock.hcl
+tf/terraform.tfstate.backup
+tf/terraform.tfstate
