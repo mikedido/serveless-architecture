@@ -5,4 +5,10 @@
 tf/.terraform
 tf/terraform.lock.hcl
 tf/terraform.tfstate.backup
-tf/terraform.tfstate
+tf/terraform.tfstate 
+tf/.terraform.lock.hcl
+
+
+# Front 
+front/build/
+front/node_modules/

@@ -13,13 +13,12 @@ def lambda_handler(event, context):
     
     try:
         
-        client.put_object(Bucket='sacembucket', Key=file_name, Body=file_content)
+        client.put_object(Bucket='sacem-bucket', Key=file_name, Body=file_content)
         
         return {
             'statusCode': 200,
             'headers': {
                 'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Credentials': 'true'
             },
             'body': 'Your file has been upload succefully'
         }

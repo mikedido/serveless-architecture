@@ -7,7 +7,7 @@ def lambda_handler(event, context):
     client = session.client('s3')
     resource = session.resource('s3')
     
-    my_bucket = resource.Bucket('sacembucket')
+    my_bucket = resource.Bucket('sacem-bucket')
     files = list(my_bucket.objects.filter(Prefix=''))
     payload = []
     
@@ -17,5 +17,8 @@ def lambda_handler(event, context):
     
     return {
         'statusCode': 200,
+        'headers': {
+            'Access-Control-Allow-Origin': '*',
+        },
         'body': json.dumps(payload)
     }
